@@ -7,3 +7,9 @@ CREATE TABLE Poblacion (
     NombrePoblacion VARCHAR (30)
 );
 
+CREATE TABLE Tienda (
+    IdTienda INT AUTO_INCREMENT PRIMARY KEY,
+    NombreTienda VARCHAR (30) UNIQUE,
+    FkPoblacion INT,
+    FOREING KEY (FkPoblacion) REFERENCES Poblacion(IdPoblacion)
+);
