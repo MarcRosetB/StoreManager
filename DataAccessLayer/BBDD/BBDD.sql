@@ -67,3 +67,15 @@ CREATE TABLE Articulo (
     Precio INT,
     Stock INT
 );
+
+CREATE TABLE Presupuesto (
+    IdPresupuesto INT AUTO_INCREMENT PRIMARY KEY,
+    ReferenciaPresupuesto VARCHAR(50),
+    FechaPresupuesto DATE,
+    FkEmpleado INT,
+    FkDireccionEntrega INT,
+    FkContacto INT,
+    FOREIGN KEY (FkEmpleado) REFERENCES Empleado(IdEmpleado),
+    FOREIGN KEY (FkDireccionEntrega) REFERENCES DireccionEntrega (IdDireccion),
+    FOREIGN KEY (FkContacto) REFERENCES Contacto(IdContacto)
+);
