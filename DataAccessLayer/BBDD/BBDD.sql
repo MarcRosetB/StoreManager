@@ -96,3 +96,12 @@ CREATE TABLE Pedido (
     FkPresupuesto INT,
     FOREIGN KEY (FkPresupuesto) REFERENCES Presupuesto(IdPresupuesto)
 );
+
+CREATE TABLE Entrega (
+    IdEntrega INT AUTO_INCREMENT PRIMARY KEY,
+    ReferenciaEntrega VARCHAR(50),
+    FechaEntrega DATE,
+    FkEquipo INT,
+    PagoPendiente INT,
+    FOREIGN KEY (FkEquipo) REFERENCES Equipo(IdEquipo)
+);
