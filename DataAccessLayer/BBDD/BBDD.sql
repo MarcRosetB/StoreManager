@@ -99,7 +99,7 @@ CREATE TABLE Pedido (
 
 CREATE TABLE Equipo (
     IdEquipo INT AUTO_INCREMENT PRIMARY KEY,
-    FkVehiculo INT,
+    Matricula CHAR(7),
     FkEmpleado INT,
     FkEmpleado INT,
     FkEmpleado INT,
