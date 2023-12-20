@@ -114,3 +114,10 @@ CREATE TABLE Entrega (
     PagoPendiente INT,
     FOREIGN KEY (FkEquipo) REFERENCES Equipo(IdEquipo)
 );
+
+CREATE TABLE Factura (
+    IdFactura INT AUTO_INCREMENT PRIMARY KEY,
+    ReferenciaFactura VARCHAR(15),
+    FkEntrega INT,
+    FOREIGN KEY(FkEntrega) REFERENCES Entrega(IdEntrega)
+);
