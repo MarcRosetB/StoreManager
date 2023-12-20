@@ -40,3 +40,12 @@ CREATE TABLE Cliente (
     FkPoblacion INT,
     FOREING KEY(FkPoblacion) REFERENCES Poblacion(IdPoblacion)
 );
+
+CREATE TABLE Contacto (
+    IdContacto INT AUTO_INCREMENT PRIMARY KEY,
+    NombreContacto VARCHAR(20),
+    TelefonoContacto CHAR(9),
+    EmailContacto VARCHAR(50),
+    FkCliente INT,
+    FOREING KEY(FkCliente) REFERENCES Cliente(IdCliente)
+);
