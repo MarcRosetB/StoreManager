@@ -88,3 +88,11 @@ CREATE TABLE Contenido (
     FOREIGN KEY(FkPresupuesto) REFERENCES Presupuesto(IdPresupuesto),
     FOREIGN KEY(FkArticulo) REFERENCES Articulo(IdArticulo)
 );
+
+CREATE TABLE Pedido (
+    IdPedido INT AUTO_INCREMENT PRIMARY KEY,
+    ReferenciaPedido VARCHAR(50),
+    FechaPedido DATE,
+    FkPresupuesto INT,
+    FOREIGN KEY (FkPresupuesto) REFERENCES Presupuesto(IdPresupuesto)
+);
