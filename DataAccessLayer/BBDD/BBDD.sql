@@ -58,3 +58,11 @@ CREATE TABLE DireccionEntrega (
     FOREING KEY(FkPoblacion) REFERENCES Poblacion(IdPoblacion),
     FOREING KEY(FkCliente) REFERENCES Cliente(IdCliente)
 );
+
+CREATE TABLE Articulo (
+    IdArticulo INT AUTO_INCREMENT PRIMARY KEY,
+    Referencia VARCHAR(30) UNIQUE,
+    Descripcion VARCHAR(50),
+    Precio INT,
+    Stock INT
+);
