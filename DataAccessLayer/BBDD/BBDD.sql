@@ -24,6 +24,7 @@ CREATE TABLE Empleado (
     NombreEmpleado VARCHAR (50),
     DNIEmpleado CHAR(9) UNIQUE,
     EmailEmpleado VARCHAR(30) UNIQUE,
+    Pwd VARCHAR(265),
     TelefonoEmpleado CHAR(9) UNIQUE,
     Salario INT,
     FkDepartamento INT,
