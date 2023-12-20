@@ -79,3 +79,12 @@ CREATE TABLE Presupuesto (
     FOREIGN KEY (FkDireccionEntrega) REFERENCES DireccionEntrega (IdDireccion),
     FOREIGN KEY (FkContacto) REFERENCES Contacto(IdContacto)
 );
+
+CREATE TABLE Contenido (
+    IdContenido INT AUTO_INCREMENT PRIMARY KEY,
+    FkPresupuesto INT,
+    FkArticulo INT,
+    Cantidad INT,
+    FOREIGN KEY(FkPresupuesto) REFERENCES Presupuesto(IdPresupuesto),
+    FOREIGN KEY(FkArticulo) REFERENCES Articulo(IdArticulo)
+);
