@@ -29,3 +29,14 @@ CREATE TABLE Empleado (
     FkDepartamento INT,
     FOREING KEY (FkDepartamento) REFERENCES Departamento(IdDepartamento)
 );
+
+CREATE TABLE Cliente (
+    IdCliente INT AUTO_INCREMENT PRIMARY KEY,
+    NombreCliente VARCHAR (50) UNIQUE,
+    CIFCliente CHAR(9) UNIQUE,
+    TelefonoCliente CHAR(9) UNIQUE,
+    EmailCliente CHAR(9) UNIQUE,
+    DireccionCliente VARCHAR(50),
+    FkPoblacion INT,
+    FOREING KEY(FkPoblacion) REFERENCES Poblacion(IdPoblacion)
+);
